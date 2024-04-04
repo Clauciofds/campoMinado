@@ -1,9 +1,9 @@
 let cols = 9  // Número de colunas da matriz
-let rows = 9
-let cellSize = 64
-let randomPoints = []
-let currentPointX
-let currentPointY
+let rows = 9  // Número de linha da matriz
+let cellSize = 64 // Tamanho da célula da matriz
+let randomPoints = [] // Cria uma lista vazia
+let currentPointX // Cria variável para armasenar a coordenada X onde ouve colisão com a mina
+let currentPointY // Cria variável para armasenar a coordenada Y onde ouve colisão com a mina
 let personagem
 let grama
 let andarX = 0
@@ -101,7 +101,7 @@ function keyPressed(numPoints) {
   if (keyIsDown(ENTER) || currentPointX === andarX && currentPointY === andarY) {
     andarX = 0
     andarY = 0
-    generateRandomPoints(4)
+    generateRandomPoints(4) // Chama a função para gerar novas coordenadas aleatórias
     currentPointX = -1
     currentPointY = -1
    
